@@ -10,13 +10,16 @@ on:
 
 jobs:
   ubuntu-build:
+    strategy:
+      matrix:
+        os: 
+          - ubuntu-22.04
+          - ubuntu-24.04
+          - ubuntu-26.04
+          - ubuntu-24.04-arm
+          - ubuntu-26.04-arm
 
-    runs-on:
-      - ubuntu-22.04
-      - ubuntu-24.04
-      - ubuntu-26.04
-      - ubuntu-24.04-arm
-      - ubuntu-26.04-arm
+    runs-on: ${{ matrix.os }}
 
     steps:
       - uses: actions/checkout@v7

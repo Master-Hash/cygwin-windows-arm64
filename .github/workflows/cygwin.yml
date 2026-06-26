@@ -23,6 +23,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v7
+        with:
+          repository: 'eukarpov/gnu-toolchain-windows-arm64'
 
       - run: |
           sudo apt-get update

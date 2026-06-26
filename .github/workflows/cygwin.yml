@@ -35,5 +35,4 @@ jobs:
             python3-lxml \
             python3-ply \
             xmlto
-      - run: |
-          PLATFORM=pc-cygwin ./build.sh
+      - run: pwd && ls -al && PLATFORM=pc-cygwin ./build.sh
